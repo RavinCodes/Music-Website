@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title> Music website By Ravin.</title>
+        <link rel="stylesheet" href="styles.css">
+    </head> 
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="logo.png" class="logo" alt="">
+                
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Specifications</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Connect</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="left-col">
+                     <h1>THE<br> REAL<br> SOUND</h1>
+                </div>
+                <div class="right-col">
+                    <p>Click Here To Listen</p>
+                     <img src="play.png" id="icon">
+                </div>
+            </div>
+        </div>
+        <audio id="mysong" src="music.mp3">
+              <source src="music.mp3" type="audio/mp3">
+        </audio>
+        <script>
+            var mysong = document.getElementById("mysong");
+            var icon = document.getElementById("icon");
+
+            icon.onclick = function(){
+                if(mysong.paused){
+                    mysong.play();
+                    icon.src = "pause.png";
+                }else{
+                    mysong.pause();
+                    icon.src = "play.png";
+                }
+            }
+        </script>
+    </body>
+</html>
